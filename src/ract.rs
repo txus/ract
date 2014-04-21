@@ -1,6 +1,5 @@
 #![crate_id = "ract#0.1"]
 #![crate_type = "lib"]
 
-pub fn foo() {
-  println!("hello {}", "world");
-}
+pub mod value;
+pub mod namespace;

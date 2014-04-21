@@ -1,5 +1,3 @@
-extern crate ract;
-
 fn main() {
-  ract::foo();
+  println!("hello world");
 }

@@ -21,7 +21,7 @@ test: bin/test
 	./bin/test
 
 bin/test: lib $(TESTS)
-	$(RUSTC) --test -L bin -o $@ $(TESTS)
+	$(RUSTC) --test -L bin -o $@ test/tests.rs
 
 .PHONY : clean
 clean:
