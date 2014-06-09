@@ -11,7 +11,6 @@ fn get_set_test() {
 
   match ns.get("foo".to_string()) {
     Some(&RInt(value)) => assert!(value == 42),
-    Some(_) => assert!(false),
-    None => assert!(false)
+    _ => assert!(false)
   }
 }
