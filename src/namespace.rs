@@ -1,25 +1,25 @@
-extern crate collections;
+use std::collections::HashMap;
 
 use value::Value;
 
 pub struct Namespace {
-  name: ~str,
-  vars: collections::HashMap<~str, Value>
+  name: String,
+  vars: HashMap<String, Value>
 }
 
 impl Namespace {
-  pub fn new(name: ~str) -> Namespace {
+  pub fn new(name: String) -> Namespace {
     Namespace {
       name: name,
-      vars: collections::HashMap::new()
+      vars: HashMap::new()
     }
   }
 
-  pub fn get<'a>(&'a self, key: ~str) -> Option<&'a Value> {
+  pub fn get<'a>(&'a self, key: String) -> Option<&'a Value> {
     self.vars.find(&key)
   }
 
-  pub fn set(&mut self, key: ~str, value: Value) {
+  pub fn set(&mut self, key: String, value: Value) {
     self.vars.insert(key, value);
   }
 }

@@ -1,5 +1,5 @@
 pub enum Value {
   RInt(int),
-  RStr(~str),
+  RStr(String),
   RNil
 }
